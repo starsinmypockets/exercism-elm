@@ -1,0 +1,19 @@
+module RNATranscription exposing (..)
+
+import Dict exposing (Dict)
+import Char
+
+
+dna_rna : Dict Char Char
+rna dna=
+    case dna of
+        'G' -> Ok 'C' 
+        'C' -> Ok 'G' 
+        'T' -> Ok 'A'
+        'A' -> Ok 'U'
+        _ -> Err dna
+
+
+
+toRNA str =
+            List.map  (String.toList str)
